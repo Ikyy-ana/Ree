@@ -82,6 +82,39 @@
         <div id="Tanah" class="tab-content active-tab">
             <h3>🪨 Element Tanah</h3>
             <p><strong>Prioritas Utama!</strong> Memberikan shield masif, ekstra Block, dan defense tambahan.</p>
+
+            <!-- Kotak Foto Fairy Sesuai Gambar -->
+            <div class="fairy-grid">
+                <!-- Foto 1 -->
+                <div class="fairy-box" onclick="showFairyInfo('Chestnut Rose', 'Fairy tipe Shield. Memberikan perisai kuat berdasarkan max HP dan meningkatkan Block Rate. Wajib untuk pertahanan mutlak.', 'foto1.jpg')">
+                    <!-- Ganti 'foto1.jpg' dengan nama file foto Iky -->
+                    <img src="https://via.placeholder.com/150/5D4037/FFF8E7?text=Foto+1" alt="Chestnut Rose">
+                    <span>Chestnut Rose</span>
+                </div>
+                <!-- Foto 2 -->
+                <div class="fairy-box" onclick="showFairyInfo('Twin Lotus', 'Fairy kembar elemen Tanah. Sangat cocok untuk memberikan buff pertahanan pasif saat menerima serangan beruntun.', 'foto2.jpg')">
+                    <!-- Ganti 'foto2.jpg' dengan nama file foto Iky -->
+                    <img src="https://via.placeholder.com/150/5D4037/FFF8E7?text=Foto+2" alt="Twin Lotus">
+                    <span>Twin Lotus</span>
+                </div>
+                <!-- Foto 3 -->
+                <div class="fairy-box" onclick="showFairyInfo('Anthurium', 'Fairy Tanah yang keras. Mengurangi persentase damage yang masuk dan menjaga formasi tank tetap kokoh.', 'foto3.jpg')">
+                    <!-- Ganti 'foto3.jpg' dengan nama file foto Iky -->
+                    <img src="https://via.placeholder.com/150/5D4037/FFF8E7?text=Foto+3" alt="Anthurium">
+                    <span>Anthurium</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tambahkan Kode Popup Modal Ini TEPAT DI ATAS TAG </footer> di bagian paling bawah halaman -->
+        <div id="fairyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeFairyInfo()">&times;</span>
+                <h3 id="modalTitle">Nama Fairy</h3>
+                <img id="modalImg" src="" alt="Fairy Detail">
+                <p id="modalDesc">Deskripsi fairy akan muncul di sini.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Kalkulator Damage -->
