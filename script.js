@@ -79,3 +79,36 @@ uploadForm.addEventListener('submit', function(e) {
         }, 4000);
     }, 1500);
 });
+
+// 5. Logika Modal (Popup) Info Flower Fairy
+function showFairyInfo(nama, deskripsi, linkFoto) {
+    const modal = document.getElementById('fairyModal');
+    
+    // Ubah teks nama dan deskripsi sesuai foto yang diklik
+    document.getElementById('modalTitle').innerText = nama;
+    document.getElementById('modalDesc').innerText = deskripsi;
+    
+    // Ubah gambar. Jika linkFoto belum diganti dengan file asli, pakai gambar sementara (placeholder)
+    const modalImg = document.getElementById('modalImg');
+    if (linkFoto.includes('.jpg') || linkFoto.includes('.png')) {
+        modalImg.src = linkFoto;
+    } else {
+        modalImg.src = `https://via.placeholder.com/300/5D4037/FFF8E7?text=${nama.replace(' ', '+')}`;
+    }
+
+    // Tampilkan modal
+    modal.style.display = 'flex';
+}
+
+// Fungsi tombol silang untuk menutup popup
+function closeFairyInfo() {
+    document.getElementById('fairyModal').style.display = 'none';
+}
+
+// Menutup popup jika area luar kotak putih diklik
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('fairyModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});

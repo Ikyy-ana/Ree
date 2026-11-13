@@ -295,3 +295,113 @@ footer {
         font-size: 2.2rem;
     }
 }
+
+/* --- Desain Grid Kotak Foto Fairy --- */
+.fairy-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.fairy-box {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: 3px solid var(--accent-color);
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: var(--primary-color);
+}
+
+.fairy-box:hover {
+    transform: scale(1.05); /* Efek membesar saat disentuh */
+    border-color: var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(243, 156, 18, 0.4);
+}
+
+.fairy-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.fairy-box:hover img {
+    opacity: 0.8;
+}
+
+.fairy-box span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(62, 39, 35, 0.85); /* Coklat transparan */
+    color: var(--text-light);
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* --- Desain Popup (Modal) Info Fairy --- */
+.modal {
+    display: none; /* Disembunyikan sampai foto diklik */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    color: var(--text-dark);
+    animation: popupMuncul 0.3s ease-out;
+}
+
+@keyframes popupMuncul {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--primary-color);
+    margin: 15px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #e74c3c; /* Merah jika ditunjuk */
+}
