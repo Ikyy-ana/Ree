@@ -1,0 +1,297 @@
+/* Variabel Warna Global (Tema Elemen Tanah / Earth Tank) */
+:root {
+    --primary-color: #5D4037; /* Coklat Tanah Gelap */
+    --secondary-color: #F39C12; /* Kuning Emas/Amber untuk aksen shield & tombol */
+    --accent-color: #8D6E63; /* Coklat Muda untuk elemen pendukung */
+    --bg-light: #FDF8F5; /* Krem hangat untuk background utama */
+    --bg-dark: #EFEBE9; /* Krem gelap untuk selang-seling section */
+    --text-dark: #3E2723; /* Coklat sangat gelap untuk teks agar lebih menyatu */
+    --text-light: #FFF8E7; /* Putih tulang (warm white) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navigasi */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(62, 39, 35, 0.5); /* Bayangan coklat */
+}
+
+.navbar .logo {
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .logo span {
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Menu Mobile (Burger) */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: 0.3s;
+}
+
+/* Hero Section - KHUSUS WARNA COKLAT ELEMEN TANAH */
+.hero-section {
+    height: 80vh;
+    /* Gradien overlay warna coklat tanah dikombinasikan dengan gambar background */
+    background: linear-gradient(rgba(93, 64, 55, 0.85), rgba(78, 52, 46, 0.95)), url('https://source.unsplash.com/1600x900/?earth,shield,brown') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+    border-bottom: 5px solid var(--secondary-color); /* Garis bawah emas sebagai batas */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 span {
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #f7e0ce; /* Coklat sangat muda */
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color: #d68910;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.section-container {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bg-alt {
+    background-color: var(--bg-dark);
+    border-top: 1px solid #d7ccc8;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid & Cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(93, 64, 55, 0.1); /* Bayangan bernuansa coklat */
+    border-top: 4px solid var(--accent-color);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(93, 64, 55, 0.2);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Tabs Flower Fairy */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 25px;
+    cursor: pointer;
+    background: #d7ccc8;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.tab-content {
+    display: none;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(93, 64, 55, 0.1);
+    text-align: center;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.active-tab {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Upload & Kalkulator */
+.calc-container, form.card {
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 4px solid var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #bcaaa4; /* Warna border coklat muda */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fafafa;
+    color: var(--text-dark);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-top: 3px solid var(--secondary-color);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ree Build - Ultimate Tank TLON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">Ree <span>Build</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#profil">Profil Akun</a></li>
+            <li><a href="#stats">Statistik & Build</a></li>
+            <li><a href="#fairy">Flower Fairy</a></li>
+            <li><a href="#kalkulator">Kalkulator Def</a></li>
+            <li><a href="#upload">Database (Upload)</a></li>
+        </ul>
+        <div class="burger-menu" id="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Beranda / Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>The Unbreakable Tank: <span>Ree</span></h1>
+            <p>Panduan dan dokumentasi build murni bertahan di The Legend of Neverland. Gak spend gak bakalan keras.</p>
+            <a href="#profil" class="btn-primary">Jelajahi Build</a>
+        </div>
+    </header>
+
+    <!-- Profil Akun -->
+    <section id="profil" class="section-container">
+        <h2>Profil Pemain</h2>
+        <article class="card">
+            <h3>Player: Iky</h3>
+            <p><strong>Karakter:</strong> Ree</p>
+            <p><strong>Role/Fokus:</strong> Pure Tank Formation</p>
+            <p><strong>Inspirasi:</strong> Maple (Bofuri) - <em>"I Don't Want to Get Hurt, so I'll Max Out My Defense."</em></p>
+            <p>Konsep utama dari build ini adalah memaksimalkan daya tahan hidup di medan tempur, bertindak sebagai tameng tak tertembus dengan kombinasi <em>Absolute Defense</em> dan <em>Machine God</em>.</p>
+        </article>
+    </section>
+
+    <!-- Statistik & Build -->
+    <section id="stats" class="section-container bg-alt">
+        <h2>Fokus Atribut Utama</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>🛡️ Damage Reduction (PvE & PvP)</h3>
+                <p>Mengurangi total persentase damage yang masuk secara langsung. Prioritas utama untuk bertahan hidup dari burst damage.</p>
+            </div>
+            <div class="card">
+                <h3>🧱 Block & Tenacity</h3>
+                <p>Meningkatkan peluang menahan serangan kritis dan mengurangi damage fatal. Tenacity mencegah musuh melakukan stun/stagger.</p>
+            </div>
+            <div class="card">
+                <h3>🔰 DEF & Echo Elements</h3>
+                <p>Meningkatkan sinergi  elemental dan defense.</p>
+            </div>
+            <div class="card">
+                <h3>💥 Smash</h3>
+                <p>Statistik ofensif sekunder agar tetap bisa memberikan ancaman saat menahan aggro musuh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Flower Fairy (Interaktif) -->
+    <section id="fairy" class="section-container">
+        <h2>Formasi Flower Fairy</h2>
+        <p>Elemen rekomendasi fairy bagi build Ree.</p>
+        
+        <div class="tabs">
+            <button class="tab-btn" onclick="openFairy(event, 'Tanah')">Tanah</button>
+        </div>
+
+        <div id="Tanah" class="tab-content active-tab">
+            <h3>🪨 Element Tanah</h3>
+            <p><strong>Prioritas Utama!</strong> Memberikan shield masif, ekstra Block, dan defense tambahan.</p>
+    </section>
+
+    <!-- Kalkulator Damage -->
+    <section id="kalkulator" class="section-container bg-alt">
+        <h2>Kalkulator Simulasi Damage</h2>
+        <div class="card calc-container">
+            <p>Hitung berapa damage yang diterima Ree setelah mitigasi.</p>
+            <label for="rawDamage">Raw Damage Musuh:</label>
+            <input type="number" id="rawDamage" placeholder="Contoh: 500000">
+            
+            <label for="dmgReduc">Total Damage Reduction (%):</label>
+            <input type="number" id="dmgReduc" placeholder="Contoh: 65">
+
+            <label for="isBlocked">Apakah Serangan di-Block?</label>
+            <select id="isBlocked">
+                <option value="no">Tidak</option>
+                <option value="yes">Ya (Mengurangi 50% lagi)</option>
+            </select>
+
+            <button onclick="hitungDamage()" class="btn-primary" style="margin-top: 15px; width: 100%;">Hitung Damage</button>
+            
+            <h3 id="hasilCalc" style="margin-top: 20px; color: #e74c3c;"></h3>
+        </div>
+    </section>
+
+    <!-- Database / Upload Informasi -->
+    <section id="upload" class="section-container">
+        <h2>Database: Update Data Akun</h2>
+        <p>Jika ada informasi baru (screenshot stat, strategi baru, dll), unggah di sini ke dalam database.</p>
+        <form id="uploadForm" class="card">
+            <label for="infoTitle">Judul Update:</label>
+            <input type="text" id="infoTitle" required placeholder="Contoh: Stat Block Terbaru">
+            
+            <label for="infoFile">Upload File/Foto Stat (Opsional):</label>
+            <input type="file" id="infoFile">
+            
+            <label for="infoDesc">Deskripsi Kekurangan Data:</label>
+            <textarea id="infoDesc" rows="4" required placeholder="Tuliskan data akun apa yang kurang atau perlu ditambahkan..."></textarea>
+            
+            <button type="submit" class="btn-primary">Kirim ke Database</button>
+            <p id="uploadStatus" style="display:none; color: green; margin-top: 10px;"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ree Build by Iky. Dirancang khusus untuk formasi Pure Tank.</p>
+    </footer>
+
+    <!-- Script Utama -->
+    <script src="script.js"></script>
+    
+    <!-- (Simulasi Backend Firebase SDK - Hilangkan komentar dan isi config jika ingin integrasi real) -->
+    <!--
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+      // Masukkan Config Firebase Anda di sini
+    </script>
+    -->
+</body>
+</html>
